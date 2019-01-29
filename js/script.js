@@ -46,7 +46,7 @@ var playerPointsElem = document.getElementById('js-playerPoints'),
     computerPointsElem = document.getElementById('js-computerPoints');
 
 function newGame() {
-  player.name = prompt('Please enter your name', 'imiÄ gracza');
+  player.name = prompt('Please enter your name', 'nick gracza');
   if (player.name) {
     player.score = computer.score = 0;
     gameState = 'started';
@@ -67,10 +67,10 @@ function playerPick(playerPick) {
 }
 function checkGameWinner() {
     if (player.score >= 10) {
-        alert('Gratulacje WygraĹeĹ');
+        alert('Gratulacje');
         gameState = 'ended';
     } else if (computer.score >= 10) {
-        alert('Niestety PrzegraĹeĹ');
+        alert('Niestety Przegrana');
         gameState = 'ended';
     }
     setGameElements();

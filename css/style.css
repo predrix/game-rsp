@@ -72,3 +72,9 @@ body {
   font-weight: bold;
   color: red;
 }
+#winning, #loosing {
+  font-size: 50px;
+  color: red;
+  font-weight: bold;
+  display: none;
+}

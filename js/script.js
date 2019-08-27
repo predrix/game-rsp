@@ -18,6 +18,10 @@ var newGameElem = document.getElementById('js-newGameButton'),
     pickElem = document.getElementById('js-playerPickElement'),
     resultsElem = document.getElementById('js-resultsTableElement');
  newGameElem.addEventListener('click', function(){newGame()});
+ newGameElem.addEventListener('click', function() {
+	looser.style.display = 'none',
+	cool.style.display = 'none';
+})
 
 function setGameElements() {
   switch(gameState) {
@@ -64,13 +68,18 @@ function playerPick(playerPick) {
 
     checkRoundWinner(playerPick, computerPick);
     checkGameWinner();
-}
+} 
+var looser = document.getElementById('loosing'),
+	cool = document.getElementById('winning');
+
 function checkGameWinner() {
-    if (player.score >= 10) {
-        alert('Gratulacje');
+    if (player.score === 5) {
+    	cool.style.display = 'block';
+        //alert('Gratulacje');
         gameState = 'ended';
-    } else if (computer.score >= 10) {
-        alert('Niestety Przegrana');
+    } else if (computer.score === 5) {
+    	looser.style.display = 'block';
+        //alert('Niestety Przegrana');
         gameState = 'ended';
     }
     setGameElements();

@@ -63,6 +63,8 @@ body {
   font-size: 30px;
   color: #fff;
   font-style: italic;
+  display: flex;
+  justify-content: center;
 }
 #js-playerPoints, #js-computerPoints {
   font-size: 40px;
@@ -86,7 +88,9 @@ body {
   font-weight: bold;
   display: none;
 }
-
+.badge i {
+  font-size: 20px;
+}
 @media (max-width: 768px) {
 	body {
 		padding: 20px;
@@ -94,5 +98,47 @@ body {
 	}
 	#js-playerPick_paper, #js-playerPick_rock, #js-playerPick_scissors {
 		margin-bottom: 20px;
-	}
+  }
+}
+@media (max-width: 500px) {
+  .welcome {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  .name {
+    font-size: 22px;
+  }
+  #js-playerPick_paper, #js-playerPick_rock, #js-playerPick_scissors {
+    height: 30px;
+    width: 80px;
+  }
+  #js-playerPickElement {
+    margin-bottom: 20px;
+  }
+  .new-game {
+    font-size: 16px;
+    height: 35px;
+    width: 100px;
+  }
+  .new-game:hover {
+    background-color: #7FFF00;
+    color: #fff;
+    transition-duration: 0.7s;
+  }
+  #js-playerPoints, #js-computerPoints {
+    font-size: 30px;
+  }
+  #js-playerPick, #js-playerResult, #js-computerPick, #js-computerResult {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .versus {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 22px;
+  }
+  .col-md-12 {
+    font-size: 22px;
+
+  }
 }
